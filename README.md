@@ -1,4 +1,4 @@
-# The Odin Project - 03 Rock Paper Scissors
+# The Odin Project - 04 Etch A Sketch
 This is the 4th project of the The odin project circulum.
  
 

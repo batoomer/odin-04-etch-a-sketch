@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a sketch</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Etch a Sketch</h1>
+    </header>
+    
+    <main>
+        <!-- Option Menu-->
+        <div class="option-container">
+            <h2>Options</h2>
+            <div class="color-option">
+                <h3>Color</h3>
+                <input type="color" class="paint-color">
+
+            </div>
+            
+            <div class="paint-option">
+                <h3>Paint Mode</h3>
+                <button class="paint-btn">Paint</button>
+                <button class="erase-btn">Erase</button>
+                <button class="rainbow-btn">Rainbow</button>
+            </div>
+            
+            <div class="border-option">
+                <h3>Borders</h3>
+                <button class="border-btn">Toogle Border</button>
+            </div>
+            
+            <div class="size-option">
+                <h3>Grid Size</h3>
+                <input type="range" min="10" max="100" value="16" class="grid-size-slider">
+                <small>16x16</small>
+            </div>
+
+            <div class="clear-option">
+                <h3>Clear</h3>
+                <button class="clear-grid">Clear</button>
+            </div>
+
+        </div>
+        <!-- Grid -->
+        <div class="grid-container grid-border">
+            <!-- children are generated with JS and have a class = "grid-item" -->
+            <!-- <div class="grid-item"></div>-->
+        </div>
+
+    </main>
+
+     <footer>
+        <p>Developed by Batouchan Omer, 2022 <a href="https://github.com/batoomer"><img id="github-logo" src="./GitHub-Mark-Light-32px.png"></a></p>
+     </footer>
+    
+     <script src="./js/script.js"></script>
+</body>
+</html>

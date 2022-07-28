@@ -10,13 +10,9 @@
 <body>
 
     <header>
-        <h1>Etch a Sketch</h1>
-    </header>
-    
-    <main>
+        <h2>Options</h2>
         <!-- Option Menu-->
         <div class="option-container">
-            <h2>Options</h2>
             <div class="color-option">
                 <h3>Color</h3>
                 <input type="color" class="paint-color">
@@ -25,14 +21,14 @@
             
             <div class="paint-option">
                 <h3>Paint Mode</h3>
-                <button class="paint-btn">Paint</button>
-                <button class="erase-btn">Erase</button>
-                <button class="rainbow-btn">Rainbow</button>
+                <button class="paint-btn btn active-mode">Paint</button>
+                <button class="erase-btn btn">Erase</button>
+                <button class="rainbow-btn btn">Rainbow</button>
             </div>
             
             <div class="border-option">
                 <h3>Borders</h3>
-                <button class="border-btn">Toogle Border</button>
+                <button class="border-btn btn active-mode">Toogle Border</button>
             </div>
             
             <div class="size-option">
@@ -43,21 +39,25 @@
 
             <div class="clear-option">
                 <h3>Clear</h3>
-                <button class="clear-grid">Clear</button>
+                <button class="clear-grid btn">Clear</button>
             </div>
-
         </div>
+
+        <footer>
+            <p>Developed by Batouchan Omer, 2022 <a href="https://github.com/batoomer"><img id="github-logo" src="./GitHub-Mark-Light-32px.png"></a></p>
+        </footer>
+    </header>
+    
+    <main>
+        <h1>Etch a Sketch</h1>
         <!-- Grid -->
         <div class="grid-container grid-border">
             <!-- children are generated with JS and have a class = "grid-item" -->
             <!-- <div class="grid-item"></div>-->
         </div>
-
     </main>
 
-     <footer>
-        <p>Developed by Batouchan Omer, 2022 <a href="https://github.com/batoomer"><img id="github-logo" src="./GitHub-Mark-Light-32px.png"></a></p>
-     </footer>
+
     
      <script src="./js/script.js"></script>
 </body>

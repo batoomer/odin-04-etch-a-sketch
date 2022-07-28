@@ -32,7 +32,10 @@ const displayController = (()=>{
             for(let j=0; j<gridSize; j++){
                 const gridItem = document.createElement('div')
                 gridItem.classList.add('grid-item');
-                gridItem.classList.add('grid-item-border');
+                if (borderState){
+                    gridItem.classList.add('grid-item-border');
+                };
+               
                 gridContainer.appendChild(gridItem);
             };
         };

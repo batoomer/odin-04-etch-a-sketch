@@ -11,7 +11,7 @@
     --color: rgba(255, 255, 255, 0.87);
 
     --bg-white: rgba(255, 255, 255);
-    --bg-white-sec: rgb(238, 238, 238);
+    --bg-white-sec: #eeeeee;
 }
 
 body{
@@ -30,6 +30,29 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     gap: 1rem;
+}
+
+
+.burger > div {
+    background-color: var(--bg);
+    width: 1.5rem;
+    height: 0.225rem;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+}
+
+.menu-wrapper {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    cursor: pointer;
+    padding: 0.625rem;
+    border-radius: 2rem;
+    display: none;
 }
 
 .option-container{
@@ -143,10 +166,34 @@ main {
     box-shadow: 0 0 0.5rem 0.1rem lawngreen;
 }
 
+.active-display{
+    display: flex;
+}
+
 
 @media only screen and (max-width:1000px) {
     :root{
-        font-size:16px
+        font-size:16px     
+    }
+
+    header {
+        display: none;
+        position: absolute;
+        width: 50%;
+
+        padding-top: 4rem;
+    }
+
+    .menu-wrapper{
+        display: flex;
+    }
+
+}
+
+@media only screen and (max-width:480px) {
+   
+    header {
+        width: 100%;
     }
 }
 
@@ -159,5 +206,9 @@ main {
 @media only screen and (max-width:290px) {
     :root{
         font-size:8px;
+    }
+
+    header {
+        width: 100%;
     }
 }

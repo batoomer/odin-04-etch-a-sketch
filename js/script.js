@@ -8,6 +8,8 @@ const displayController = (()=>{
     const gridSliderText = document.querySelector('.size-option > small');
     const colorInput = document.querySelector('.paint-color');
     const clearButton = document.querySelector('.clear-grid');
+    const burgerButton = document.querySelector('.menu-wrapper');
+    const headerMenu = document.querySelector('header');
     
     let gridItemSet = document.querySelectorAll('.grid-item');
     let gridSize = 16;
@@ -15,6 +17,7 @@ const displayController = (()=>{
     let mouseClicked = false;
     let paintMode = 'paint';
     let color = '#000000';
+    let menuFlag = false;
 
     function setGridContainerStyle(gridSize){
         const style = `
@@ -121,6 +124,18 @@ const displayController = (()=>{
         };
     };
 
+    function handleMenu(){
+        if (menuFlag) {
+            headerMenu.classList.remove('active-display');
+            burgerButton.style.backgroundColor = '#eeeeee';
+            menuFlag = false;
+        }else {
+            headerMenu.classList.add('active-display');
+            menuFlag = true;
+            burgerButton.style.backgroundColor = 'white';
+        }
+    }
+
 
     function addOptionMenuEventListeners(){
         //Grid Slider Size Listeners
@@ -146,6 +161,9 @@ const displayController = (()=>{
 
         // Clear Grid
         clearButton.addEventListener('click', () => {resetGrid()});
+
+        // Burger Button 
+        burgerButton.addEventListener('click', () => {handleMenu()})
     };
 
     function addGridDisplayEventListeners(){
